@@ -1,0 +1,985 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/oyegokeademola25-beep/Test_Repo/blob/main/Week3_Workshop_Function_Complete_Solution\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 📝 Hands-On Exercises: Functions in Python"
+      ],
+      "metadata": {
+        "id": "rBBBtEZIpSt3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that prints a welcome message.**\n",
+        "\n",
+        "         \"Hello, welcome to CMP7005, Introduction to Data Analytics!\"."
+      ],
+      "metadata": {
+        "id": "XGntH738p20h"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "8gNnv88WpSGE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "eafdb1ff-f2c7-44ac-826e-25a847245666"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello, welcom to CMP7005, Introduction to Data Analytics!\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def welcome():\n",
+        "  print('Hello, welcom to CMP7005, Introduction to Data Analytics!')\n",
+        "\n",
+        "welcome()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Function with Parameters**\n",
+        "\n",
+        "**Task: Create a function that greets someone by name.**\n",
+        "\n",
+        "    Hello <name>!,\n",
+        "    Glad to see you learning Function in Python!\n",
+        "    Happy Learning!\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "Q_lKdsmmrPIk"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "fULxjzcmWpfM",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4908347b-d329-4bb9-c804-7771cab1df97"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello, Ademola!\n",
+            "Glad to see you learning Function in Python!\n",
+            "Happy Learning\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def Hello (name):\n",
+        "  print(f'Hello, {name}!')\n",
+        "  print('Glad to see you learning Function in Python!')\n",
+        "  print('Happy Learning')\n",
+        "\n",
+        "Hello('Ademola')\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that makes a formatted name tag with first name, last name, and grade.**\n",
+        "\n",
+        "**Output:**\n",
+        "```\n",
+        "==============================\n",
+        "    HELLO, MY NAME IS\n",
+        "    Amrita Prasad\n",
+        "    Level: 7\n",
+        "=============================="
+      ],
+      "metadata": {
+        "id": "etG5zEMX3pyZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "BEN6jqlNWtdd",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5a5aff2f-b2f0-4fa9-a777-fe6eb7baa030"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "==============================\n",
+            "Hello, my name is\n",
+            "Ademola oyegoke\n",
+            "  level: 8\n",
+            "==============================\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def name_tag(first_name, last_name, grade):\n",
+        "     print('=' * 30)\n",
+        "     print('Hello, my name is')\n",
+        "     print(f\"{first_name} {last_name}\")\n",
+        "     print(f'  level: {grade}')\n",
+        "     print('=' * 30)\n",
+        "name_tag    ('Ademola', 'oyegoke',8)\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that prints rectangle information with length and width.**\n",
+        "\n",
+        "`An example output:`\n",
+        "\n",
+        "**Output:**\n",
+        "```\n",
+        "📐 Rectangle Details 📐\n",
+        "Length: 5 units\n",
+        "Width: 3 units\n",
+        "Area: 15 square units\n",
+        "Perimeter: 16 units\n",
+        "------------------------------"
+      ],
+      "metadata": {
+        "id": "HENVXtOY5ON1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "id": "sXcAq7dXWwye",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1f17d804-351c-4925-bf69-8d61aab1ebe7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "📐 Rectangle Details 📐\n",
+            "Length: 5 units\n",
+            "Width: 3 units\n",
+            "Area: 15 square units\n",
+            "Perimeter: 16 units\n",
+            "------------------------------\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def rectangle_details(length, width):\n",
+        "    area = length * width\n",
+        "    perimeter = 2 * (length + width)\n",
+        "\n",
+        "    return (\n",
+        "        \"📐 Rectangle Details 📐\\n\"\n",
+        "        f\"Length: {length} units\\n\"\n",
+        "        f\"Width: {width} units\\n\"\n",
+        "        f\"Area: {area} square units\\n\"\n",
+        "        f\"Perimeter: {perimeter} units\\n\"\n",
+        "        + \"-\" * 30\n",
+        "    )\n",
+        "\n",
+        "\n",
+        "print(rectangle_details(5, 3))\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Function with Return Value**\n",
+        "\n",
+        "**Task: Create a function add_numbers(a, b) that returns the sum of two numbers.\n",
+        "Call the function by inputting with different numbers and print the results.**"
+      ],
+      "metadata": {
+        "id": "LX-xEfJUl_4v"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "QfGiCEqcWzAx",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8ecdd466-cce5-42b9-8a18-a003d43be341"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the result is:  15\n",
+            "the result is:  30\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def add_numbers(a,b):\n",
+        "  return a+b\n",
+        "result = add_numbers(10,5)\n",
+        "print(f'the result is:  {result}')\n",
+        "\n",
+        "result = add_numbers(20,10)\n",
+        "print(f'the result is:  {result}')\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Create a function that calculates the area of a circle and returns it.\n",
+        "\n",
+        "`(Area = 3.14 × radius × radius)`\n",
+        "\n",
+        "**Output:**\n",
+        "```\n",
+        "Circle area: 78.5\n",
+        "Larger circle area: 314.0\n",
+        "Combined area: 78.26"
+      ],
+      "metadata": {
+        "id": "yezyLFim-Ou_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "id": "hN4f9ehFW0sa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "28b22c2e-736d-499f-e5e4-293a05b91596"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "circle area: 78.5\n",
+            "larger circle area: 200.96\n",
+            "combined_area: 279.46000000000004\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def circle_area(radius):\n",
+        "  return 3.14 * radius * radius\n",
+        "area_1 = circle_area(5)\n",
+        "area_2 = circle_area(8)\n",
+        "combined_area = area_1 + area_2\n",
+        "print(f'circle area: {area_1}')\n",
+        "print (f'larger circle area: {area_2}')\n",
+        "print(f'combined_area: {combined_area}')"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **Try on your own question:**"
+      ],
+      "metadata": {
+        "id": "yUR5spfaVVpZ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that converts Celsius to Fahrenheit and returns the result.**\n",
+        "\n",
+        "`(Formula: fahrenheit = celsius × 9/5 + 32)`\n",
+        "\n",
+        "**Output:**\n",
+        "```\n",
+        "25°C = 77.0°F\n",
+        "Water freezes at 32.0°F\n",
+        "Water boils at 212.0°F"
+      ],
+      "metadata": {
+        "id": "Nks0hDB-VKdm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 11,
+      "metadata": {
+        "id": "u0eH4G2SW2uW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "cb5fa89d-b602-4668-df07-90b79a0080c7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "25°C = 77.0°F\n",
+            "water freezes at 77.0\n",
+            "water_boil_at212.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def celsius_to_fahrenheit(celsius):\n",
+        "        fahrenheit = celsius * 9/5 +32\n",
+        "        return fahrenheit\n",
+        "celsius = 25\n",
+        "fahrenheit = celsius_to_fahrenheit(celsius)\n",
+        "print(f'{celsius}°C = {fahrenheit}°F')\n",
+        "freezing_point = celsius_to_fahrenheit(0)\n",
+        "print(f'water freezes at {fahrenheit}')\n",
+        "boilling_point = celsius_to_fahrenheit(100)\n",
+        "print(f'water_boil_at{boilling_point}')\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **Try on your own question:**"
+      ],
+      "metadata": {
+        "id": "O8iYDByRVX3J"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that converts kilometers to miles and returns it**\n",
+        "`(1 kilometer = 0.621 miles)`\n",
+        "\n",
+        "**Output:**\n",
+        "```\n",
+        "5 km = 3.105 miles\n",
+        "10 km = 6.21 miles\n",
+        "Marathon distance: 26.082 miles"
+      ],
+      "metadata": {
+        "id": "QUUL4W72VdaU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 18,
+      "metadata": {
+        "id": "GsOwcln4W5Fp",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "99fa3034-d5a3-4514-9a1c-039fb6f6aa68"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5 km = 3.105 miles\n",
+            "10 km = 6.21 miles\n",
+            "Marathon distance: 26.082 miles\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def km_to_miles(kilometers):\n",
+        "    miles = kilometers * 0.621\n",
+        "    return miles\n",
+        "\n",
+        "print(f\"5 km = {km_to_miles(5)} miles\")\n",
+        "print(f\"10 km = {km_to_miles(10)} miles\")\n",
+        "print(f\"Marathon distance: {km_to_miles(42)} miles\")\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Using Default Parameters**\n",
+        "\n",
+        "**Task: Write a function power(base, exponent=2) that returns base raised to the power of exponent. Test it by calling power(5) and power(2, 3).**"
+      ],
+      "metadata": {
+        "id": "y1hhufM6oTQT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "id": "JrOo6nHZW6zF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9e7eff11-ee3f-4e96-e3d6-2f7ce3c74923"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "25\n",
+            "8\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def power(base, exponent):\n",
+        "    return base ** exponent\n",
+        "\n",
+        "\n",
+        "\n",
+        "print(power(5,2))      # Default exponent (2)\n",
+        "print(power(2, 3))   # Custom exponent\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Palindrome Checker**\n",
+        "\n",
+        "**Task: Write a function is_palindrome(text) that returns True if the string is the same when reversed, otherwise False.**"
+      ],
+      "metadata": {
+        "id": "neevjXSZwOD1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 17,
+      "metadata": {
+        "id": "ptBeYV7JW8Aw",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8e28f050-76bc-482f-825f-6fbd50cbd2af"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "True\n",
+            "True\n",
+            "False\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def is_palindrome(text):\n",
+        "    # Convert to lowercase to make it case-insensitive\n",
+        "    text = text.lower()\n",
+        "    return text == text[::-1]\n",
+        "\n",
+        "print(is_palindrome(\"madam\"))\n",
+        "print(is_palindrome(\"Racecar\"))\n",
+        "print(is_palindrome(\"Level\"))\n",
+        "print(is_palindrome(\"python\"))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Multiple Return Values**\n",
+        "\n",
+        "**Task: Create a function circle_measurements(radius) that returns both area and circumference of a circle.**\n",
+        "\n",
+        "**Use formulas:**\n",
+        "\n",
+        "**Area = π × r²**\n",
+        "\n",
+        "**Circumference = 2 × π × r**"
+      ],
+      "metadata": {
+        "id": "QBcosa16pi5e"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 16,
+      "metadata": {
+        "id": "0xoktQkJW9hU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5db5b874-0e1b-4e19-da86-36963417d942"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Area:     78.540\n",
+            "Circumference:     31.416\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "import math\n",
+        "\n",
+        "def circle_measurements(radius):\n",
+        "    area = math.pi * radius ** 2\n",
+        "    circumference = 2 * math.pi * radius\n",
+        "    return area, circumference\n",
+        "a, c = circle_measurements(5)\n",
+        "print(f\"Area:     {a:.3f}\")\n",
+        "print(f\"Circumference:     {c:.3f}\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that calculates total and average from three game scores and returns both.**\n",
+        "\n",
+        "```\n",
+        "\n",
+        "Output:\n",
+        "\n",
+        "Total: 270, , Average: 90.0\n",
+        "Your total is 280 and average is 93.33333333333333\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "J66Yj4IJLVEm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "eQHTKlB4W-pv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2311ea66-d39f-4fa4-ca64-becdb91635ff"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total :60,       Average: 20.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def game_scores(score1, score2, score3):\n",
+        "  total = score1 + score2 + score3\n",
+        "  average = total/3\n",
+        "  return total, average\n",
+        "total, average = game_scores(10,20,30)\n",
+        "print(f'Total :{total},       Average: {average}')\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "AdctpX3iW0bW"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that finds both the smallest and largest of three numbers.**\n",
+        "```\n",
+        "Output:\n",
+        "\n",
+        "Smallest: 5, Largest: 12\n",
+        "Range: 25 to 100\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "9sy1Xm3iONc3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 15,
+      "metadata": {
+        "id": "3TRIdVzfW_p5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7418b302-73f9-4a06-92b5-3ea6a336b0fe"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Smallest: 5, Largest: 12\n",
+            "Range: 25 to 100\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def find_smallest_largest(a, b, c):\n",
+        "    smallest = min(a, b, c)\n",
+        "    largest = max(a, b, c)\n",
+        "    return smallest, largest\n",
+        "\n",
+        "small, large = find_smallest_largest(5, 12, 8)\n",
+        "print(f\"Smallest: {small}, Largest: {large}\")\n",
+        "\n",
+        "small, large = find_smallest_largest(25, 100, 60)\n",
+        "print(f\"Range: {small} to {large}\")\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that takes a full name and returns first name and last name separately.**\n",
+        "\n",
+        "**Output:**\n",
+        "```\n",
+        "Name Amrita Prasad\n",
+        "First name: Amrita, Last name: Prasad\n",
+        "Hello Amrita! Your last name is Prasad."
+      ],
+      "metadata": {
+        "id": "DaWb_SJhRLz3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "id": "8pc0Wmh8XArv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9dd18074-6ea5-44c1-8992-3b71792840b6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Name Ademola Peter Oyegoke\n",
+            "First name: Ademola, Last name: Oyegoke\n",
+            "Hello Ademola! Your last name is Oyegoke.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def split_name(full_name):\n",
+        "    parts = full_name.split()\n",
+        "    first_name = parts[0]\n",
+        "    last_name = parts[-1]\n",
+        "    return first_name, last_name\n",
+        "\n",
+        "\n",
+        "# Example usage\n",
+        "name = \"Ademola Peter Oyegoke\"\n",
+        "print(f\"Name {name}\")\n",
+        "\n",
+        "first, last = split_name(name)\n",
+        "\n",
+        "print(f\"First name: {first}, Last name: {last}\")\n",
+        "print(f\"Hello {first}! Your last name is {last}.\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **Try on your own question:**"
+      ],
+      "metadata": {
+        "id": "tSKMgxDiUh8G"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: What to do: Create a function that returns both area and perimeter of a rectangle.**"
+      ],
+      "metadata": {
+        "id": "jmwDzkTdUt5d"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 14,
+      "metadata": {
+        "id": "rqHayHpOXKc6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "05c2981c-dd9a-4f32-bd9d-c422817f22a5"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Area: 35\n",
+            "Perimeter: 24\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def rectangle_measurements(length, width):\n",
+        "    area = length * width\n",
+        "    perimeter = 2 * (length + width)\n",
+        "    return area, perimeter\n",
+        "\n",
+        "a, p = rectangle_measurements(7, 5)\n",
+        "\n",
+        "print(f\"Area: {a}\")\n",
+        "print(f\"Perimeter: {p}\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Functions with Arbitrary Arguments:**"
+      ],
+      "metadata": {
+        "id": "LCyOOkCUSuTF"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that can add any amount of numbers together**"
+      ],
+      "metadata": {
+        "id": "btphMGiNTQ6R"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 13,
+      "metadata": {
+        "id": "QmM7SBDMXMMu",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "192d6c4f-c612-4184-942f-59087d0d7060"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "-1\n",
+            "21.5\n",
+            "25\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def add_numbers(*numbers):\n",
+        "    total = sum(numbers)\n",
+        "    return total\n",
+        "print(add_numbers(1, -2))\n",
+        "print(add_numbers(5, 1.5, 15))\n",
+        "print(add_numbers(3, 4, 5, 6, 7))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that finds the highest number from any amount of scores**"
+      ],
+      "metadata": {
+        "id": "urAmieh1Tpqb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 19,
+      "metadata": {
+        "id": "QCPgbfA3XOAQ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "fc6487c1-6a61-4d37-9d2c-206517907c67"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "92\n",
+            "45\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def find_highest(*scores):\n",
+        "    return max(scores)\n",
+        "\n",
+        "print(find_highest(78, 85, 92, 88))\n",
+        "print(find_highest(10, 45, 32))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Task: Create a function that calculates the average of any amount of numbers**"
+      ],
+      "metadata": {
+        "id": "LBXuHUMIT9FJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 20,
+      "metadata": {
+        "id": "r6WJw6ssXPDv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b1bdc044-d869-4c0b-f6dd-f06ceb9c650f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20.0\n",
+            "20.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def calculate_average(*numbers):\n",
+        "    if not numbers:\n",
+        "        return 0   # Prevent division by zero\n",
+        "\n",
+        "    total = sum(numbers)\n",
+        "    average = total / len(numbers)\n",
+        "    return average\n",
+        "print(calculate_average(10, 20, 30))\n",
+        "print(calculate_average(5, 15, 25, 35))\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Function with Keyword Arguments :**\n",
+        "\n",
+        "**Task: Create a function book_info(title, author, year=2025) that prints the book details. Call it using positional and keyword arguments.**"
+      ],
+      "metadata": {
+        "id": "xVuINNoDsdHt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 21,
+      "metadata": {
+        "id": "0tQMMQGBXQiF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2dd2e862-d60d-46ef-d5de-97b52cea6526"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Book Title: Python Basics\n",
+            "Author: Ademola Oyegoke\n",
+            "Year: 2026\n",
+            "---\n",
+            "Book Title: Learn AI\n",
+            "Author: John Doe\n",
+            "Year: 2025\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Solution:\n",
+        "def book_info(title, author, year=2025):\n",
+        "    print(f\"Book Title: {title}\")\n",
+        "    print(f\"Author: {author}\")\n",
+        "    print(f\"Year: {year}\")\n",
+        "\n",
+        "\n",
+        "# Example usage with positional arguments\n",
+        "book_info(\"Python Basics\", \"Ademola Oyegoke\", 2026)\n",
+        "\n",
+        "print(\"---\")\n",
+        "\n",
+        "# Example usage with keyword arguments\n",
+        "book_info(title=\"Learn AI\", author=\"John Doe\")\n"
+      ]
+    }
+  ]
+}
